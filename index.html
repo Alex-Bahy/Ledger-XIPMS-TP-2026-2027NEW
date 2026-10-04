@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ledger Nilai — XI MPLB Semester GANJIL 2026/2027</title>
+<title>Ledger Nilai — XI PMS Semester GANJIL 2026/2027</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,700;9..144,800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -261,7 +261,7 @@ tr:last-child td{border-bottom:none;}
   <div class="topbar-brand">
     <div class="topbar-logo">AK</div>
     <div class="topbar-title">
-      Ledger Nilai — XI MPLB
+      Ledger Nilai — XI PMS
       <span>Semester GANJIL  · TP 2026/2027</span>
     </div>
   </div>
@@ -329,7 +329,7 @@ tr:last-child td{border-bottom:none;}
 // ═══════════════════════════════════════════════
 // ▼▼▼ GANTI URL INI DENGAN URL WEB APP ANDA ▼▼▼
 // ═══════════════════════════════════════════════
-const API_URL = 'https://script.google.com/macros/s/AKfycbxIQtXEusi3cafUf3UD0UpkBcvSUyVCW-djVUhAsKKw46wE7I2l_tHMa7TRa2ko_C7mDA/exec';
+const API_URL = 'https://script.google.com/macros/s/AKfycbyOeyvLD_rvbvGpy_20sTg-pRhy6OE4_Vare7FO5DxentliQbWLSu7rQq5DqWh7fXlE/exec';
 // ═══════════════════════════════════════════════
 // ▲▲▲ SELESAI — tidak perlu ubah yang lain  ▲▲▲
 // ═══════════════════════════════════════════════
@@ -514,7 +514,7 @@ function renderLedger() {
 
   const tableHtml = `<div class="table-outer table-ledger-main">
     <div class="table-toolbar">
-      <div class="table-toolbar-title">📊 Ledger Nilai — XI MPLB · Semester GANJIL 2026/2027</div>
+      <div class="table-toolbar-title">📊 Ledger Nilai — XI PMS · Semester GANJIL 2026/2027</div>
       <div class="legend">
         <span><span class="legend-dot" style="background:var(--sky)"></span>Umum</span>
         <span><span class="legend-dot" style="background:var(--teal)"></span>Kejuruan</span>
@@ -628,7 +628,7 @@ function downloadExcel() {
   const headers=['No','NIS','Nama Siswa',...mapel,'Jumlah','Rata-rata','Peringkat'];
   const data1=[
     ['LEDGER NILAI SEMESTER GANJIL  TAHUN PELAJARAN 2026/2027'],
-    ['Kelas XI Manajemen Perkantoran dan Layanan Bisnis (XI MPLB)'],
+    ['Kelas XI Pemasaran (XI PMS)'],
     [],
     headers
   ];
@@ -646,7 +646,7 @@ function downloadExcel() {
   const ranked=[...siswa].filter(s=>s.rata!==null).sort((a,b)=>b.rata-a.rata);
   const data2=[
     ['REKAP PERINGKAT — SEMESTER GANJIL  2026/2027'],
-    ['Kelas XI MPLB'],
+    ['Kelas XI PMS'],
     [],
     ['Peringkat','No','NIS','Nama Siswa','Rata-rata','Nilai Terisi']
   ];
@@ -657,7 +657,7 @@ function downloadExcel() {
   ws2['!cols']=[{wch:10},{wch:6},{wch:12},{wch:32},{wch:12},{wch:14}];
   XLSX.utils.book_append_sheet(wb,ws2,'Rekap Peringkat');
 
-  XLSX.writeFile(wb,'Ledger_Nilai_XIMPLB_GANJIL _2025-2026.xlsx');
+  XLSX.writeFile(wb,'Ledger_Nilai_XIPMS_GANJIL _2025-2026.xlsx');
 }
 
 // ── DOWNLOAD PDF ─────────────────────────────────────────────
